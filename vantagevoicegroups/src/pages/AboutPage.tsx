@@ -1,4 +1,5 @@
-import { Target, Eye, Heart, Shield, Award, TrendingUp, ChevronRight, Quote, Users, BarChart3, CheckCircle2 } from 'lucide-react';
+import { Target, Eye, Heart, Shield, Award, TrendingUp, ChevronRight, CheckCircle, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const AboutPage: React.FC = () => {
   const values = [
@@ -28,11 +29,7 @@ const AboutPage: React.FC = () => {
     },
   ];
 
-  const stats = [
-    { value: '20+', label: 'Years of Experience', icon: BarChart3 },
-    { value: '50+', label: 'Projects Completed', icon: CheckCircle2 },
-    { value: '15+', label: 'Countries Served', icon: Users },
-  ];
+
 
   return (
     <div className="bg-white">
@@ -62,51 +59,62 @@ const AboutPage: React.FC = () => {
           </svg>
         </div>
       </section>
-
-      {/* Positioning Statement - Enhanced with quote styling */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-          <div className="relative">
-            <Quote className="absolute -top-6 -left-6 w-16 h-16 text-amber-200/50" />
-            <p className="text-2xl md:text-3xl text-slate-700 font-medium leading-relaxed text-center italic px-8">
-              "Vantage Voices Group is an African evidence and decision intelligence firm that transforms data
-              into actionable insights for governments, businesses, and development partners."
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Who We Are - Redesigned with card */}
-      <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
+           {/* ── ABOUT SNAPSHOT ── */}
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Who We Are</h2>
-              <div className="w-20 h-1 bg-amber-500 mx-auto rounded-full"></div>
-            </div>
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-slate-100">
-              <p className="text-slate-600 text-lg leading-relaxed">
-                Vantage Voices Group Ltd is an independent research and analytics firm based in Kenya, serving
-                clients across Africa. We specialize in generating high-quality data and translating it into
-                insights that drive impact. Our multidisciplinary team combines deep domain expertise with cutting-edge
-                analytical methods to deliver solutions that matter.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-                {stats.map((stat, idx) => (
-                  <div key={idx} className="text-center p-4 bg-slate-50 rounded-xl">
-                    <stat.icon className="w-8 h-8 text-amber-500 mx-auto mb-3" />
-                    <div className="text-3xl font-bold text-slate-900">{stat.value}</div>
-                    <div className="text-sm text-slate-500">{stat.label}</div>
-                  </div>
-                ))}
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Image Column */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-500" />
+              <img
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Team working on data analysis"
+                className="relative rounded-2xl shadow-2xl w-full h-auto object-cover"
+              />
+              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-amber-500 to-orange-600 text-deep-blue p-5 rounded-xl shadow-xl hidden md:block transform rotate-3 group-hover:rotate-0 transition">
+                <p className="font-bold text-lg">Kenya-based</p>
+                <p className="text-sm opacity-250">Serving all of Africa</p>
               </div>
             </div>
+
+            {/* Content Column */}
+            <div className="space-y-6">
+              <div>
+                <span className="inline-block bg-amber-100 text-amber-700 text-sm font-semibold px-4 py-2 rounded-full">About Us</span>
+                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-4 mb-4">
+                  Vantage Voices Group Ltd
+                </h2>
+                <div className="w-15 h-1 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full mb-6"></div>
+              </div>
+              <p className="text-slate-600 text-lg leading-relaxed">
+                An independent research and analytics firm based in Kenya, serving clients across Africa.
+                We specialize in generating high-quality data and translating it into insights that drive impact.
+              </p>
+              <ul className="space-y-3">
+                {[
+                  'Governments & Ministries - Policy Support',
+                  'International NGOs & Donors - Program Evaluation',
+                  'Private Sector companies - Market Intelligence'
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-3 text-slate-700 group">
+                    <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center group-hover:bg-emerald-200 transition">
+                      <CheckCircle className="h-4 w-4 text-emerald-600" />
+                    </div>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+             
+            </div>
           </div>
         </div>
       </section>
 
+    
+
+
       {/* Mission & Vision - Redesigned with gradient backgrounds */}
-      <section className="py-20 bg-gradient-to-r from-amber-500 to-orange-500">
+      <section className="py-20 bg-gradient-to-r from-amber-600 to-amber-300">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
@@ -114,7 +122,7 @@ const AboutPage: React.FC = () => {
                 <Target className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-3">Our Mission</h3>
-              <p className="text-amber-50 leading-relaxed">
+              <p className="text-deep-blue leading-relaxed">
                 To generate credible, timely, and actionable insights for better decision-making, empowering
                 organizations to navigate complexity with confidence.
               </p>
@@ -124,7 +132,7 @@ const AboutPage: React.FC = () => {
                 <Eye className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-3">Our Vision</h3>
-              <p className="text-amber-50 leading-relaxed">
+              <p className="text-deep-blue leading-relaxed">
                 To be a leading African research and insights firm shaping policy, markets, and development
                 through evidence-driven solutions.
               </p>
@@ -134,12 +142,12 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Values - Enhanced with better cards and animations */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-deep-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Values</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-amber-500 mb-4">Our Values</h2>
             <div className="w-20 h-1 bg-amber-500 mx-auto rounded-full mb-6"></div>
-            <p className="text-slate-600">The principles that guide our work and define our culture.</p>
+            <p className="text-amber-500">The principles that guide our work and define our culture.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
             {values.map((value, index) => (
@@ -154,6 +162,9 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </section>
+      
+       
+
 
       {/* Leadership - Redesigned with modern layout */}
       <section className="py-20 bg-slate-50">
@@ -195,19 +206,7 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section - New addition for engagement */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to transform your data into impact?</h2>
-          <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
-            Let's collaborate to turn your complex challenges into actionable solutions.
-          </p>
-          <button className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
-            Get in touch
-            <ChevronRight className="w-5 h-5" />
-          </button>
-        </div>
-      </section>
+    
     </div>
   );
 };

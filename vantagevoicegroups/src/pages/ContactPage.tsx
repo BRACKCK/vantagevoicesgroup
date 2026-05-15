@@ -44,11 +44,6 @@ const ContactPage: React.FC = () => {
     { value: 'other', label: 'General Inquiry', icon: Mail },
   ];
 
-  const faqs = [
-    { q: 'How quickly do you respond?', a: 'We typically respond to all inquiries within 24 hours on business days.' },
-    { q: 'Do you work with international clients?', a: 'Yes, we work with clients globally, with a focus on African markets.' },
-    { q: 'What is your typical project timeline?', a: 'Project timelines vary based on scope. We\'ll provide a detailed timeline during consultation.' },
-  ];
 
   return (
     <div className="bg-white">
@@ -121,7 +116,7 @@ const ContactPage: React.FC = () => {
               </div>
 
               {/* Quick Connect Panel */}
-              <div className="bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl p-6 text-white text-center">
+              <div className="bg-gradient-to-r from-amber-600 to-amber-300 rounded-2xl p-6 text-white text-center">
                 <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-4">
                   <Calendar className="w-8 h-8" />
                 </div>
@@ -139,7 +134,7 @@ const ContactPage: React.FC = () => {
               <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 border border-slate-100">
                 <div className="mb-8">
                   <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Send us a Message</h2>
-                  <div className="w-16 h-1 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full mb-3"></div>
+                  <div className="w-60 h-1 bg-gradient-to-r from-amber-600 to-orange-500 rounded-full mb-3"></div>
                   <p className="text-slate-500 text-sm">Fill out the form below and we'll get back to you within 24 hours.</p>
                 </div>
 
@@ -196,8 +191,9 @@ const ContactPage: React.FC = () => {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-semibold text-slate-700 mb-2">Inquiry Type *</label>
+                      <label htmlFor="inquiryType" className="block text-sm font-semibold text-slate-700 mb-2">Inquiry Type *</label>
                       <select
+                        id="inquiryType"
                         name="inquiryType" value={formData.inquiryType} onChange={handleChange} required
                         className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-100 transition-all bg-white"
                       >
@@ -219,7 +215,7 @@ const ContactPage: React.FC = () => {
 
                     <button
                       type="submit" disabled={isSubmitting}
-                      className="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold py-3.5 px-6 rounded-xl hover:shadow-lg hover:scale-[1.02] transition-all duration-300 disabled:opacity-60 flex items-center justify-center gap-2 text-base"
+                      className="w-full bg-gradient-to-r from-amber-600 to-amber-300 text-white font-semibold py-3.5 px-6 rounded-xl hover:shadow-lg hover:scale-[1.02] transition-all duration-300 disabled:opacity-60 flex items-center justify-center gap-2 text-base"
                     >
                       {isSubmitting ? (
                         <><span className="animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full"></span> Sending Message...</>
@@ -239,24 +235,7 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="inline-block bg-amber-100 text-amber-700 text-sm font-semibold px-4 py-2 rounded-full mb-4">FAQs</span>
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto rounded-full"></div>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {faqs.map((faq, idx) => (
-              <div key={idx} className="bg-slate-50 rounded-xl p-6 border border-slate-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <h3 className="font-bold text-slate-800 mb-2">{faq.q}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed">{faq.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+     
 
       {/* Map Section */}
       <section className="py-16 bg-slate-50">

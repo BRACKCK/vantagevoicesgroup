@@ -1,5 +1,5 @@
-import { Target, PenTool, Database, BarChart, FileText, Smartphone, LineChart, MapPin, Activity, Shield, CheckCircle2, Zap, TrendingUp, Award, Users, Clock } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Target, PenTool, Database, BarChart, FileText, Smartphone, LineChart, MapPin, Activity, Zap } from 'lucide-react';
+
 
 const ApproachPage: React.FC = () => {
   const steps = [
@@ -47,12 +47,6 @@ const ApproachPage: React.FC = () => {
     { icon: MapPin, name: 'Spatial Analysis', tools: 'ArcGIS, QGIS', desc: 'Geospatial mapping and location intelligence' },
   ];
 
-  const principles = [
-    { icon: Shield, title: 'Data Integrity', desc: 'Rigorous validation and quality checks at every stage' },
-    { icon: Users, title: 'Client Partnership', desc: 'Collaborative approach with transparent communication' },
-    { icon: TrendingUp, title: 'Continuous Learning', desc: 'Adapting methodologies based on emerging insights' },
-    { icon: Award, title: 'Ethical Excellence', desc: 'Highest standards of research ethics and compliance' },
-  ];
 
   return (
     <div className="bg-white">
@@ -149,7 +143,7 @@ const ApproachPage: React.FC = () => {
       </section>
 
       {/* Tools & Capabilities - Enhanced */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-amber-500">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
@@ -177,87 +171,8 @@ const ApproachPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Quality Standards - Redesigned */}
-      <section className="py-24 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-                <Shield className="w-4 h-4 text-amber-400" />
-                <span className="text-sm font-medium">Our Commitment</span>
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Quality & Ethical Standards</h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto rounded-full mb-6"></div>
-              <p className="text-slate-300 text-lg leading-relaxed">
-                Every project adheres to international research standards and ethical guidelines, ensuring data integrity, 
-                participant protection, and unbiased analysis.
-              </p>
-            </div>
+     
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {[
-                { label: 'Ethical Compliance', icon: Shield, desc: 'Strict adherence to research ethics' },
-                { label: 'Peer Review', icon: CheckCircle2, desc: 'Multi-level validation process' },
-                { label: 'Quality Assurance', icon: Award, desc: 'ISO-aligned quality protocols' },
-                { label: 'Data Security', icon: Shield, desc: 'GDPR-compliant data protection' },
-              ].map((standard, idx) => (
-                <div key={idx} className="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-5 text-center hover:bg-white/15 transition-all duration-300 hover:-translate-y-1">
-                  <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
-                    <standard.icon className="w-6 h-6 text-amber-400" />
-                  </div>
-                  <p className="font-semibold text-white text-sm">{standard.label}</p>
-                  <p className="text-slate-400 text-xs mt-1">{standard.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Principles Section - New */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Guiding Philosophy
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Core Principles</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto rounded-full mb-6"></div>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {principles.map((principle, idx) => (
-              <div key={idx} className="text-center p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div className="w-14 h-14 rounded-full bg-amber-100 flex items-center justify-center mx-auto mb-4">
-                  <principle.icon className="w-7 h-7 text-amber-600" />
-                </div>
-                <h3 className="font-bold text-slate-800 mb-2">{principle.title}</h3>
-                <p className="text-slate-500 text-sm">{principle.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-amber-500 to-orange-500">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Start Your Project?
-            </h2>
-            <p className="text-white/90 text-lg mb-8 leading-relaxed">
-              Let us apply our rigorous methodology to help you achieve your goals.
-            </p>
-            <Link 
-              to="/contact" 
-              className="group inline-flex items-center gap-2 bg-white text-slate-800 font-bold py-4 px-10 rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300"
-            >
-              Let's Discuss Your Needs
-              <Zap className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

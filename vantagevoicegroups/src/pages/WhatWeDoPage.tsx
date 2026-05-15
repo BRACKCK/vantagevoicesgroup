@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, TrendingUp, Users, BarChart, Database, Heart, CheckCircle2, Zap, ArrowRight, Briefcase, ClipboardCheck, LineChart, Microscope } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ChevronDown, ChevronUp, TrendingUp, Users, BarChart, Database, Heart, CheckCircle2, Zap, Briefcase, ClipboardCheck, LineChart, Microscope } from 'lucide-react';
+
 
 interface ServiceCardProps {
   icon: React.ElementType;
@@ -225,7 +225,7 @@ const WhatWeDoPage: React.FC = () => {
       </section>
 
       {/* Our Approach Section - New */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-gradient-to-b from-amber-500 to-orange-500">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
@@ -253,78 +253,8 @@ const WhatWeDoPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Tools & Technologies - Enhanced */}
-      <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Tech Stack
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Tools & Technologies</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto rounded-full mb-6"></div>
-            <p className="text-slate-600">
-              Leveraging industry-leading tools to deliver precise, reliable results
-            </p>
-          </div>
-          
-          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-            {['ODK', 'KoboToolbox', 'SurveyCTO', 'DHIS2', 'R', 'STATA', 'Python', 'ArcGIS', 'Power BI', 'Tableau', 'SPSS', 'Qualtrics', 'NVivo', 'SQL'].map((tool, idx) => (
-              <span 
-                key={tool} 
-                className="group px-5 py-2.5 bg-white border border-slate-200 rounded-full text-slate-700 font-medium shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:border-amber-300 cursor-pointer"
-                style={{ animationDelay: `${idx * 30}ms` }}
-              >
-                <span className="group-hover:text-amber-600 transition-colors">{tool}</span>
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+     
 
-      {/* Statistics / Impact Section - New */}
-      <section className="py-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="space-y-2">
-              <div className="text-4xl font-bold text-transparent bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text">98%</div>
-              <div className="text-slate-300 text-sm">Client Satisfaction</div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-4xl font-bold text-transparent bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text">24/7</div>
-              <div className="text-slate-300 text-sm">Project Support</div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-4xl font-bold text-transparent bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text">ISO</div>
-              <div className="text-slate-300 text-sm">Quality Standards</div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-4xl font-bold text-transparent bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text">100%</div>
-              <div className="text-slate-300 text-sm">Data Confidentiality</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section - Enhanced */}
-      <section className="py-20 bg-gradient-to-r from-amber-500 to-orange-500">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Transform Your Data into Decisions?
-            </h2>
-            <p className="text-white/90 text-lg mb-8 leading-relaxed">
-              Tell us about your project and we'll design the right approach tailored to your needs.
-            </p>
-            <Link 
-              to="/contact" 
-              className="group inline-flex items-center gap-2 bg-white text-slate-800 font-bold py-4 px-10 rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300"
-            >
-              Contact Our Team
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

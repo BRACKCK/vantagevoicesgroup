@@ -1,4 +1,4 @@
-import { Activity, TrendingUp, BarChart, Users, FileText, PieChart, Award, CheckCircle } from 'lucide-react';
+import { Activity, TrendingUp, BarChart, Users, FileText, PieChart} from 'lucide-react';
 
 const ExperiencePage: React.FC = () => {
   const expertiseAreas = [
@@ -49,12 +49,7 @@ const ExperiencePage: React.FC = () => {
     },
   ];
 
-  const stats = [
-    { number: '20+', label: 'Years of Experience', icon: Award },
-    { number: '15+', label: 'Countries Served', icon: CheckCircle },
-    { number: '200+', label: 'Projects Completed', icon: BarChart },
-    { number: '50+', label: 'Client Organizations', icon: Users },
-  ];
+ 
 
   return (
     <div>
@@ -67,22 +62,6 @@ const ExperiencePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-12 bg-white">
-        <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center p-6 bg-gray-50 rounded-xl border border-gray-100">
-                <div className="inline-flex p-3 bg-orange/10 rounded-full mb-3">
-                  <stat.icon className="h-7 w-7 text-orange" />
-                </div>
-                <div className="text-3xl md:text-4xl font-bold text-deep-blue">{stat.number}</div>
-                <div className="text-gray-500 text-sm mt-1">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Key Expertise */}
       <section className="py-16 bg-gray-50">
@@ -132,19 +111,7 @@ const ExperiencePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Testimonial */}
-      <section className="py-16 bg-deep-blue text-white">
-        <div className="container-custom text-center">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-6xl text-orange mb-4 font-serif">"</div>
-            <p className="text-xl md:text-2xl italic mb-6 text-gray-200 leading-relaxed">
-              Vantage Voices Group delivered exceptional insights that transformed our program strategy.
-              Their deep understanding of the African context and rigorous methodology set them apart.
-            </p>
-            <p className="font-bold text-orange">— Senior Director, International Development Organization</p>
-          </div>
-        </div>
-      </section>
+     
     </div>
   );
 };
