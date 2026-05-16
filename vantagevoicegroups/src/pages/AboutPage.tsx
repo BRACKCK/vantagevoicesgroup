@@ -1,5 +1,5 @@
-import { Target, Eye, Heart, Shield, Award, TrendingUp, ChevronRight, CheckCircle, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Target, Eye, Heart, Shield, Award, TrendingUp, ChevronRight, CheckCircle } from 'lucide-react';
+
 
 const AboutPage: React.FC = () => {
   const values = [
