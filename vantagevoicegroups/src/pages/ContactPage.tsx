@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Zap, ArrowRight, MessageCircle, Globe, Calendar, Users, ExternalLink } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle, Zap, ArrowRight, MessageCircle, Globe, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ContactPage: React.FC = () => {
