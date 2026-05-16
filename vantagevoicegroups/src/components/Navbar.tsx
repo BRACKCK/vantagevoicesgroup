@@ -42,21 +42,21 @@ const Navbar: React.FC = () => {
   return (
     <nav className={`bg-deep-blue text-white sticky top-0 z-50 transition-shadow duration-300 ${scrolled ? 'shadow-lg' : ''}`}>
       <div className="container-custom">
-        <div className="flex justify-between items-center py-4">
-          <Link to="/" className="flex items-center space-x-2">
-            <BarChart2 className="h-8 w-8 text-orange" />
-            <span className="font-heading font-bold text-lg md:text-xl leading-tight">
+        <div className="flex justify-between items-center py-6 md:py-7">
+          <Link to="/" className="flex items-center space-x-3">
+            <BarChart2 className="h-9 w-9 md:h-10 md:w-10 text-orange" />
+            <span className="font-heading font-bold text-xl md:text-2xl leading-tight">
               Vantage <span className="text-orange">Voices</span> Group
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition duration-300 pb-1 ${
+                className={`text-base font-medium transition duration-300 pb-1 ${
                   isActive(link.path)
                     ? 'text-orange border-b-2 border-orange'
                     : 'hover:text-orange'
@@ -73,18 +73,18 @@ const Navbar: React.FC = () => {
             className="lg:hidden p-2 focus:outline-none hover:text-orange transition"
             aria-label="Toggle menu"
           >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
           </button>
         </div>
 
         {/* Mobile Navigation Dropdown */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-700 space-y-1">
+          <div className="lg:hidden py-6 border-t border-gray-700 space-y-2">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`block py-2 px-2 rounded text-sm font-medium transition duration-300 ${
+                className={`block py-3 px-3 rounded text-base font-medium transition duration-300 ${
                   isActive(link.path) 
                     ? 'text-orange bg-white/5' 
                     : 'hover:text-orange hover:bg-white/5'

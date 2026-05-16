@@ -185,25 +185,6 @@ const InsightsPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Newsletter */}
-      <section className="py-16 bg-deep-blue text-white">
-        <div className="container-custom text-center">
-          <h2 className="text-3xl font-bold mb-4">Subscribe to Our Newsletter</h2>
-          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-            Get the latest insights and research findings delivered straight to your inbox.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-orange"
-            />
-            <button className="bg-orange text-white font-semibold py-3 px-6 rounded-lg hover:bg-opacity-90 transition whitespace-nowrap">
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
