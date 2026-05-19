@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle, Zap, ArrowRight, MessageCircle,
 import { Link } from 'react-router-dom';
 
 const ContactPage: React.FC = () => {
-  const [state, handleSubmit] = useForm('xnjwerqe');
+  const [state, handleSubmit] = useForm('xlgvdkvn');
 
   const contactInfo = [
     { icon: MapPin, title: 'Visit Us', details: ['Nairobi, Kenya'], subtext: "East Africa's research hub", color: 'amber' },
