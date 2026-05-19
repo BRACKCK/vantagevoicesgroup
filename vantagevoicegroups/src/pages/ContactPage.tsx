@@ -30,7 +30,7 @@ const ContactPage: React.FC = () => {
         </div>
         <div className="absolute top-20 left-10 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl" />
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 text-center">
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
               <Zap className="w-4 h-4 text-amber-400" />
