@@ -8,7 +8,7 @@ const ContactPage: React.FC = () => {
 
   const contactInfo = [
     { icon: MapPin, title: 'Visit Us', details: ['Nairobi, Kenya'], subtext: "East Africa's research hub", color: 'amber' },
-    { icon: Mail, title: 'Email Us', details: ['vantagetrackgroups@gmail.com'], href: 'mailto:vantagetrackgroups@gmail.com', subtext: 'We reply within 24 hours', color: 'blue' },
+    { icon: Mail, title: 'Email Us', details: ['vantagetrackgroups@gmail.com'], href: 'mailto:info@vantagevoicesgroup.org', subtext: 'We reply within 24 hours', color: 'blue' },
     { icon: Phone, title: 'Call Us', details: ['+254 727 764 164', '+254 721 767 750'], href: 'tel:+254727764164', subtext: 'Mon-Fri, 8am-5pm EAT', color: 'emerald' },
     
   ];
