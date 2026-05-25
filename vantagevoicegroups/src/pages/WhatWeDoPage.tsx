@@ -103,12 +103,16 @@ const WhatWeDoPage: React.FC = () => {
       color: 'orange',
       gradient: 'from-amber-500 to-orange-500',
       details: [
-        'Customer satisfaction surveys',
+        'Market research and consumer insights',
+        'Market intelligence and trends analysis',
+        'Customer perception and satisfaction surveys',
         'Brand perception studies',
         'Market entry analysis',
         'Product testing and validation',
-        'Consumer segmentation and profiling',
-        'Competitor landscape mapping',
+        'Business process assessements and improvement',
+        'Business plans',
+        'Market and innovation strageies',
+        
       ],
     },
     {
@@ -136,9 +140,13 @@ const WhatWeDoPage: React.FC = () => {
         'Baseline, midline, endline surveys',
         'Impact evaluations (RCT, quasi-experimental)',
         'Performance monitoring systems',
-        'Learning frameworks and adaptive management',
-        'Theory of change development',
-        'Evaluation capacity building',
+        'Learning frameworks',
+        'Data analysis and evidence generation',
+        'Operational and implementation research',
+        'Strategic insights for programme and business growth',
+        'Marketing and Evaluaion plans',
+     
+
       ],
     },
     {

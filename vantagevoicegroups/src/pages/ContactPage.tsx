@@ -7,10 +7,29 @@ const ContactPage: React.FC = () => {
   const [state, handleSubmit] = useForm('xqejavae');
 
   const contactInfo = [
-    { icon: MapPin, title: 'Visit Us', details: ['Nairobi, Kenya'], subtext: "East Africa's research hub", color: 'amber' },
-    { icon: Mail, title: 'Email Us', details: ['vantagetrackgroups@gmail.com'], href: 'mailto:info@vantagevoicesgroup.org', subtext: 'We reply within 24 hours', color: 'blue' },
-    { icon: Phone, title: 'Call Us', details: ['+254 727 764 164', '+254 721 767 750'], href: 'tel:+254727764164', subtext: 'Mon-Fri, 8am-5pm EAT', color: 'emerald' },
-    
+    {
+      icon: MapPin,
+      title: 'Visit Us',
+      details: ['Nairobi, Kenya'],
+      subtext: "East Africa's research hub",
+      color: 'amber',
+    },
+    {
+      icon: Mail,
+      title: 'Email Us',
+      details: ['info@vantagevoicesgroup.org'],
+      href: 'mailto:info@vantagevoicesgroup.org',
+      subtext: 'We reply within 24 hours',
+      color: 'blue',
+    },
+    {
+      icon: Phone,
+      title: 'Call Us',
+      details: ['+254 727 764 164', '+254 721 767 750'],
+      href: 'tel:+254727764164',
+      subtext: 'Mon–Fri, 8am–5pm EAT',
+      color: 'emerald',
+    },
   ];
 
   const inquiryTypes = [
@@ -74,7 +93,9 @@ const ContactPage: React.FC = () => {
                           <h3 className="font-bold text-slate-800 mb-1">{info.title}</h3>
                           {info.details.map((detail, idx) => (
                             'href' in info ? (
-                              <a key={idx} href={info.href} className="block text-slate-600 hover:text-amber-600 transition text-sm">{detail}</a>
+                              <a key={idx} href={info.href} className="block text-slate-600 hover:text-amber-600 transition text-sm break-all">
+                                {detail}
+                              </a>
                             ) : (
                               <p key={idx} className="text-slate-600 text-sm">{detail}</p>
                             )
@@ -86,8 +107,6 @@ const ContactPage: React.FC = () => {
                   ))}
                 </div>
               </div>
-
-             
             </div>
 
             {/* Form Panel */}
@@ -99,7 +118,7 @@ const ContactPage: React.FC = () => {
                   <p className="text-slate-500 text-sm">Fill out the form below and we'll get back to you within 24 hours.</p>
                 </div>
 
-                {/* ── SUCCESS STATE ── */}
+                {/* SUCCESS STATE */}
                 {state.succeeded ? (
                   <div className="text-center py-16">
                     <div className="inline-flex p-4 bg-emerald-100 rounded-full mb-4">
@@ -114,10 +133,8 @@ const ContactPage: React.FC = () => {
                     </div>
                   </div>
                 ) : (
-                  /* ── FORM ── */
                   <form onSubmit={handleSubmit} className="space-y-6">
 
-                    {/* Global form error */}
                     <ValidationError errors={state.errors} className="bg-red-50 border border-red-200 text-red-700 rounded-xl px-4 py-3 text-sm" />
 
                     <div className="grid md:grid-cols-2 gap-5">
@@ -207,21 +224,36 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Map Section */}
+      {/* Real Google Map – Nairobi, Kenya */}
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-              <div className="relative h-64 md:h-80 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <MapPin className="w-12 h-12 text-amber-400 mx-auto mb-3" />
-                  <h3 className="text-xl font-bold">Our Location</h3>
-                  <p className="text-slate-300 mt-2">Nairobi, Kenya</p>
-                  <p className="text-slate-400 text-sm mt-1">Serving clients across Africa and globally</p>
-                </div>
-              </div>
-              <div className="p-6 text-center border-t border-slate-100">
-                <p className="text-slate-600">📍 Based in Nairobi's research hub — Conveniently located for meetings and collaboration</p>
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">Our Location</h2>
+            <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-slate-100">
+              <iframe
+                title="Vantage Voices Group – Nairobi, Kenya"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255282.3585809!2d36.6826!3d-1.2921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2sus!4v1700000000000"
+                width="100%"
+                height="400"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <div className="p-5 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <p className="text-slate-600 text-sm flex items-center gap-2">
+                  <MapPin className="w-4 h-4 text-amber-500 flex-shrink-0" />
+                  Based in Nairobi, Kenya — serving clients across Africa and globally
+                </p>
+                <a
+                  href="https://maps.google.com/?q=Nairobi,Kenya"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-amber-600 hover:text-amber-700 text-sm font-semibold transition"
+                >
+                  Open in Google Maps
+                  <ArrowRight className="w-4 h-4" />
+                </a>
               </div>
             </div>
           </div>
