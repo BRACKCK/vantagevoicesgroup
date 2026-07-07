@@ -17,8 +17,8 @@ const ContactPage: React.FC = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      details: ['info@vantagevoicesgroup.org'],
-      href: 'mailto:info@vantagevoicesgroup.org',
+      details: ['voicetrackgroup@gmail.com'],
+      href: 'mailto:voicetrackgroup@gmail.com',
       subtext: 'We reply within 24 hours',
       color: 'blue',
     },

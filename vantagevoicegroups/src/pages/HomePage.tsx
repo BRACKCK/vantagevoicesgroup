@@ -74,7 +74,7 @@ const HomePage: React.FC = () => {
 
         {/* Header */}
         <div>
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+          <h1 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
             Tracking Voices.
             <br />
             <span className="bg-gradient-to-r from-amber-600 to-amber-600 bg-clip-text text-transparent">
@@ -82,7 +82,7 @@ const HomePage: React.FC = () => {
             </span>
           </h1>
 
-          <p className="mt-5 text-slate-600 text-lg leading-relaxed">
+          <p className="mt-3 text-slate-600 text-lg leading-relaxed">
             Vantage Voices Group Ltd helps organizations understand people,
             markets, and systems through credible data, analytics,
             and evidence-driven insights.
@@ -92,7 +92,7 @@ const HomePage: React.FC = () => {
         {/* Why Choose Us */}
         <div className="bg-amber-50/80 backdrop-blur-md border border-amber-200 rounded-2xl p-5 shadow-sm">
           <h2 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-            <Zap className="w-5 h-5 text-amber-600" />
+            <Zap className="w-7 h-5 text-amber-600" />
             Why Choose Us
           </h2>
 
