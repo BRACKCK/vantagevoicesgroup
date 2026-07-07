@@ -36,12 +36,12 @@ const AboutPage: React.FC = () => {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
         </div>
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 text-center">
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-28 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
               <span className="text-sm font-medium">Who We Are</span>
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
               About Vantage Voices
             </h1>
             <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
@@ -57,10 +57,10 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Who We Are - Full Description */}
-      <section className="py-24 bg-white">
+      <section className="py-14 md:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
+            <div className="text-center mb-8 md:mb-12">
               <span className="inline-block bg-amber-100 text-amber-700 text-sm font-semibold px-4 py-2 rounded-full">Who We Are</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-4 mb-4">Vantage Voices Group Ltd</h2>
               <div className="w-20 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto rounded-full mb-6"></div>
@@ -87,7 +87,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-gradient-to-r from-[#0A2540] to-[#1a3a5c]">
+      <section className="py-12 md:py-16 bg-gradient-to-r from-[#0A2540] to-[#1a3a5c]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300">
@@ -115,9 +115,9 @@ const AboutPage: React.FC = () => {
      
 
       {/* Values Section */}
-      <section className="py-20 bg-[#0A2540]">
+      <section className="py-12 md:py-16 bg-[#0A2540]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-[#F7931E] mb-4">Our Values</h2>
             <div className="w-20 h-1 bg-[#F7931E] mx-auto rounded-full mb-6"></div>
             <p className="text-slate-300">The principles that guide our work and define our culture.</p>
@@ -137,9 +137,9 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Leadership Section */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-12 md:py-16 bg-slate-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Leadership</h2>
             <div className="w-20 h-1 bg-[#F7931E] mx-auto rounded-full mb-6"></div>
             <p className="text-slate-600">Meet the experienced leaders driving our vision forward.</p>
@@ -179,7 +179,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#0A2540] to-[#1a3a5c]">
+      <section className="py-12 md:py-16 bg-gradient-to-r from-[#0A2540] to-[#1a3a5c]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Let's turn your data into decisions.</h2>
           <p className="text-slate-300 mb-8 max-w-2xl mx-auto">

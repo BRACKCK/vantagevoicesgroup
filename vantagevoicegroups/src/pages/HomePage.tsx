@@ -53,7 +53,7 @@ const HomePage: React.FC = () => {
   <div className="relative grid lg:grid-cols-[55%_45%]">
     
     {/* LEFT SIDE IMAGE */}
-    <div className="relative h-[60vh] lg:h-[90vh] max-h-[800px]">
+    <div className="relative h-[32vh] sm:h-[40vh] lg:h-[90vh] max-h-[800px]">
       <img
         src="/llog2.jpeg"
         alt="Vantage Voices Group"
@@ -69,7 +69,7 @@ const HomePage: React.FC = () => {
     <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-amber-400 via-amber-500 to-amber-400 lg:hidden" />
 
     {/* RIGHT SIDE CONTENT */}
-    <div className="flex items-center justify-center px-6 py-12 lg:py-16 lg:px-12">
+    <div className="flex items-center justify-center px-5 py-8 sm:py-10 lg:py-16 lg:px-12">
       <div className="w-full max-w-xl space-y-6">
 
         {/* Header */}
@@ -129,25 +129,10 @@ const HomePage: React.FC = () => {
 </section>
 
 
-          {/* Clients Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container-custom">
-          <h2 className="section-title">We Work With</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {clients.map((client, index) => (
-              <div key={index} className="text-center p-6 bg-white rounded-lg shadow-md">
-                <div className="text-4xl mb-3">{client.icon}</div>
-                <p className="font-semibold text-deep-blue">{client.category}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── OUR SERVICES ── */}
-      <section className="py-24 bg-gradient-to-b from-amber-500 to-orange-500">
+          {/* ── OUR SERVICES ── */}
+      <section className="py-14 md:py-20 bg-gradient-to-b from-amber-500 to-orange-500">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
             <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Zap className="w-4 h-4" />
               What We Do
@@ -175,21 +160,32 @@ const HomePage: React.FC = () => {
               </Link>
             ))}
           </div>
-
-         
         </div>
       </section>
 
-   
+      {/* Clients Section */}
+      <section className="py-10 md:py-14 bg-gray-50">
+        <div className="container-custom">
+          <h2 className="section-title">We Work With</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {clients.map((client, index) => (
+              <div key={index} className="text-center p-6 bg-white rounded-lg shadow-md">
+                <div className="text-4xl mb-3">{client.icon}</div>
+                <p className="font-semibold text-deep-blue">{client.category}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ── CTA ── */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-slate-800">
+      <section className="py-12 md:py-16 bg-gradient-to-r from-slate-900 to-slate-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-white mb-3 md:mb-4">
               Ready to Transform Your Data into Decisions?
             </h2>
-            <p className="text-slate-300 text-lg mb-8">
+            <p className="text-slate-300 text-base md:text-lg mb-6 md:mb-8">
               Let's collaborate to unlock insights that drive meaningful impact for your organization.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

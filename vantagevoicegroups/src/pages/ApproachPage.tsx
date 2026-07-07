@@ -58,12 +58,12 @@ const ApproachPage: React.FC = () => {
         <div className="absolute top-20 left-10 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl" />
         
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 text-center">
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-28 text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
             <Zap className="w-4 h-4 text-amber-400" />
             <span className="text-sm font-medium">Our Methodology</span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6">
             Our Approach
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
@@ -80,9 +80,9 @@ const ApproachPage: React.FC = () => {
       </section>
 
       {/* Process Steps - Enhanced Timeline */}
-      <section className="py-24 bg-gradient-to-b from-white to-slate-50">
+      <section className="py-14 md:py-20 bg-gradient-to-b from-white to-slate-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
             <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               Our Process
             </div>
@@ -143,9 +143,9 @@ const ApproachPage: React.FC = () => {
       </section>
 
       {/* Tools & Capabilities - Enhanced */}
-      <section className="py-24 bg-amber-500">
+      <section className="py-14 md:py-20 bg-amber-500">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
             <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               Tech Stack
             </div>
