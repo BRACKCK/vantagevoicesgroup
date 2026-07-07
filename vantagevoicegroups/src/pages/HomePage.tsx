@@ -74,15 +74,10 @@ const HomePage: React.FC = () => {
 
         {/* Header */}
         <div>
-          <div className="inline-flex items-center gap-2 bg-amber-100 border border-amber-300 text-amber-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-            <Zap className="w-4 h-4" />
-            Trusted Research & Analytics Partner
-          </div>
-
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
             Tracking Voices.
             <br />
-            <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-600 to-amber-600 bg-clip-text text-transparent">
               Delivering Insights.
             </span>
           </h1>
