@@ -63,8 +63,6 @@ const HomePage: React.FC = () => {
       {/* Optional overlay */}
       <div className="absolute inset-0 bg-black/5" />
 
-      {/* Mobile dividing line - scoped to image only */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-amber-400 via-amber-500 to-amber-400 lg:hidden" />
     </div>
 
     {/* GOLDEN DIVIDING LINE (desktop) */}
